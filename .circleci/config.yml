@@ -13,7 +13,7 @@ jobs:
           command: |
             pip install pytest
             pip install requests
-            pytest --junitxml=test-results/junit.xml hw04a.py
+            pytest --junitxml=test-results/junit.xml test_hw04a.py
       - store_test_results:
           path: test-results    
 workflows:
