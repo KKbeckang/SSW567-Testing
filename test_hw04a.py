@@ -2,7 +2,7 @@ import unittest
 from hw04a import GithubRepoInfo
 
 class TestHW4(unittest.TestCase):
-    
+
     def testGitUser(self):
         self.assertEqual(GithubRepoInfo("KKbeckang")[0],'Repo: avi-clothing Number of commits: 8','Fail')
     def testNonString(self):
@@ -10,7 +10,7 @@ class TestHW4(unittest.TestCase):
     def testNonUser(self):
         self.assertEqual(GithubRepoInfo('esdsadasesxxzcxzczsdae232o'),'The Input User is Invalid','Fail')
     def testEmptyString(self):
-        self.assertEqual(GithubRepoInfo(''),'"The Input cannot be empty"','Fail')
+        self.assertEqual(GithubRepoInfo(''),'The Input cannot be empty','Fail')
 
 
 
