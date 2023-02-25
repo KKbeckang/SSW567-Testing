@@ -9,7 +9,7 @@ class TestHW4(unittest.TestCase):
     def testNonString(self):
         self.assertEqual(GithubRepoInfo(21312412312),'The User ID should be a String','Fail')
     def testNonUser(self):
-        self.assertEqual(GithubRepoInfos('esdsadasesxxzcxzczsdae232o'),'The Input User is Invalid','Fail')
+        self.assertEqual(GithubRepoInfo('esdsadasesxxzcxzczsdae232o'),'The Input User is Invalid','Fail')
 
 
 
