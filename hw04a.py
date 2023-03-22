@@ -3,7 +3,8 @@ import json
 
 def GithubRepoInfo(UserId):
     
-    access_token = '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'
+    access_token = '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'
+
     if not isinstance(UserId, str):
         return "The User ID should be a String"
     if UserId == '':
@@ -12,7 +13,6 @@ def GithubRepoInfo(UserId):
     read = requests.get(FullURL,
                         headers={'Authorization': f'token {access_token}'})
     record = read.json()
-    
     if not isinstance(record,list):
         return "The Input User is Invalid"
     RepoInfo=[]
@@ -24,6 +24,7 @@ def GithubRepoInfo(UserId):
         RepoCommit = requests.get(RepoURL,
                         headers={'Authorization': f'token {access_token}'})
         RepoCommit = RepoCommit.json()
+        
         RepoNames.append(record[i]['name'])
         RepoCommitsNum.append(len(RepoCommit))
     for i in range(len(record)):{
@@ -31,3 +32,4 @@ def GithubRepoInfo(UserId):
     }
     return RepoInfo
 
+# GithubRepoInfo('KKbeckang')
